@@ -1,13 +1,283 @@
-body {
+:root {
+  --main-color: #0086ad;
+  --blue1: #001932;
+  --blue2: #10335f;
+  --blue3: #00639B;
+  --blue4: #0087CA;
+  --blue5: #00ABE7;
+  --blue6: #00DDF9;
+  --demoColor: #eee;
+
+}
+
+* {
+  cursor: default;
+  user-select: none;
+  border: 0px solid red;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/100% Arial;
+  color: #333;
+  margin: 0;
+  padding: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1, h2, h3, header {  
+  margin-bottom: 20px;
+}
+
+h4, h5, h6 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  color:var(--blue2);
+  line-height: 30px;
+}
+h2 {color:var(--blue4)}
+h3 {color:var(--blue4)}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background:var(--blue3);
+  margin-bottom: 30px;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  color: #fff;
+  font: bold 14px/100% Arial;
+  padding: 15px;
+}
+
+input, textarea{
+  cursor: text;
+}
+
+button, input, section, textarea {
+  display: block;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+}
+
+textarea {
+  font-family: Arial;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#default-users {
+  display: flex;
+}
+
+#default-users > * {
+  margin: 0 10px 0 0;
+}
+
+.demo {
+  display: inline-block;
+  position: absolute;
+  border: none;
+  background: var(--demoColor);
+  animation: demo-animation 5s infinite;
+}
+
+@keyframes demo-animation {
+  0% {top: 20px;}
+  70% {top: 20px}
+  90% {top: 0px}
+  92% {top: 20px}
+  94% {top: 14px}
+  96% {top: 20px}
+  98% {top: 17px}
+}
+
+.deemphasize {
+  font: 13px/100% Arial;
+  color: #777;
+}
+
+.author-detail {
+  font: bold 12px/100% Arial;
+  color: #777;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.listedPost {
+  font: 16px Arial;
+}
+
+/* LOGIN */
+#login .demo::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: var(--demoColor);
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+
+/* NAVBAR */
+#navbar ul li a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* SIGN UP */
+#login, #sign-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 70px; /* Both need to be made more responsive */
+}
+
+/* HOME */
+#home header {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+
+#home #header-left{
+  width: 40%;
+}
+
+#home #header-left button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#home header img {
+ height: 100%;
+}
+
+#home section ul {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* NEW POST FORM */
+#new-post-form {
+  max-width: 800px;
+  margin: auto;
+}
+
+#new-post-form textarea {
+  height: 400px;
+}
+
+/* POSTS */
+.postParagraph {
+  margin: 20px 0;
+  text-align: justify;
+  color: #666;
+  line-height: 20px;
+}
+
+/* COMMENTS */
+#post ul {
+  padding: 0;
+}
+#post li{
+  list-style: none;
+}
+
+#comment header {
+  margin-bottom: 10px;
+}
+
+#post button, #comment button, a {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #09b;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* COMMENT OPTIONS */
+.comment-options {
+  margin-top: 20px;
+}
+
+.comment-options button {
+  margin-right: 15px;
+}
+
+.comment-options textarea {
+  height: 80px;
+  margin-bottom: 0;
+}
+
+/* COMMENT CREATION FIELD */
+
+
+
+
+/**/
+@keyframes mymove {
+  0%  {top: 0px;}
+  50% {top: 20px;}
+  100% {top: 0px;}
+}
+
+
+
+
