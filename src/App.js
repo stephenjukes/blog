@@ -1,26 +1,25 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-import NavBar from './app/common/navbar';
+import { HashRouter, Route } from 'react-router-dom';
 import Home from './app/home/home-container';
 import Login from './app/user-active/login-container';
 import SignUp from './app/users/sign-up-container';
+import UpdateProfile from './app/profile/update-profile-container';
 import CreatePost from './app/post-create/create-post-container';
 import Post from './app/post/post-container';
 import './App.css';
 
 export default function() {
   return (
-    <Router history={createBrowserHistory()}>
-      {/* <NavBar /> */}
-      <Route exact path="/" component={Login}></Route>
-      <Route path="/login" component={Login}></Route>
-      <Route path="/sign-up" component={SignUp}></Route>
-      <Route path="/home" component={Home}></Route>
-      <Route path="/create-post" component={CreatePost}></Route>
-      {/* <Route path="/post" component={Post}></Route> */}
-      <Route path="/posts/:post_id" component={Post}></Route>
-    </Router>
+    <HashRouter basename='/'>
+        <Route exact path="/" component={Login}></Route>
+        <Route path="/login" component={Login}></Route>
+        <Route path="/sign-up" component={SignUp}></Route>
+        <Route path="/home" component={Home}></Route>
+        <Route path="/update-profile" component={UpdateProfile}></Route>
+        <Route path="/create-post" component={CreatePost}></Route>
+        <Route path="/posts/:post_id" component={Post}></Route>
+    </HashRouter>
+    /*</Router>*/
   )
 }
 

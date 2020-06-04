@@ -19,8 +19,8 @@
 }
 
 body {
-  font: 14px/100% Arial;
-  color: #333;
+  font: 14px/20px Arial;
+  color: #666;
   margin: 0;
   padding: 20px;
   -webkit-font-smoothing: antialiased;
@@ -32,23 +32,29 @@ code {
     monospace;
 }
 
-h1, h2, h3, header {  
+header {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {  
+  line-height: 30px;
   margin-bottom: 20px;
 }
 
 h4, h5, h6 {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
-h1 {
-  color:var(--blue2);
-  line-height: 30px;
-}
-h2 {color:var(--blue4)}
-h3 {color:var(--blue4)}
+h1 { color:var(--blue2); }
+h2 { color:var(--blue4); }
+h3 { color:var(--blue4); }
 
 a {
   text-decoration: none;
+}
+
+img {
+  border-radius: 5px;
 }
 
 ul {
@@ -77,7 +83,11 @@ nav li {
 
 input, textarea{
   cursor: text;
+  font-family: Arial;
+  width: 100%;
 }
+
+
 
 button, input, section, textarea {
   display: block;
@@ -88,9 +98,17 @@ button, input, section, textarea {
 }
 
 textarea {
+  padding: 10px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+/* textarea {
   font-family: Arial;
   width: 100%;
-}
+} */
 
 button {
   cursor: pointer;
@@ -182,34 +200,33 @@ section {
 }
 
 /* HOME */
-#home header {
-  display: flex;
-  justify-content: space-between;
-  height: 200px;
+#profile {
+  overflow: auto;
 }
 
-#home #header-left{
-  width: 40%;
+#profile h1 {
+  display: inline-block;
+  vertical-align: top;
 }
 
-#home #header-left button {
-  width: 100%;
-  margin: 10px 0;
+#profile ul {
+  width: 50%;
 }
 
-#home header img {
- height: 100%;
-}
-
-#home section ul {
+#top-posts ul {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/* UPDATE PROFILE */
+#update-profile input {
+  padding: 10px;
+}
+
 /* NEW POST FORM */
-#new-post-form {
+#new-post-form, #update-profile{
   max-width: 800px;
   margin: auto;
 }
@@ -219,7 +236,7 @@ section {
 }
 
 /* POSTS */
-.postParagraph {
+.postParagraph, #comment p {
   margin: 20px 0;
   text-align: justify;
   color: #666;
@@ -232,6 +249,14 @@ section {
 }
 #post li{
   list-style: none;
+}
+
+#comment {
+  margin: 20px 0;
+}
+
+#comments li {
+  padding: 0;
 }
 
 #comment header {
@@ -263,21 +288,29 @@ button:focus {
 
 .comment-options textarea {
   height: 80px;
-  margin-bottom: 0;
 }
 
 /* COMMENT CREATION FIELD */
 
 
+@media only screen and (max-width: 500px) {
+  #profile h1 {
+    display: block;
+    margin: 0 auto 20px;
+  }
 
+  #profile ul {
+    width: 100%;
+  }
 
-/**/
-@keyframes mymove {
-  0%  {top: 0px;}
-  50% {top: 20px;}
-  100% {top: 0px;}
+  #avatar {
+    display: block        !important;
+    width: 100%           !important;
+    max-width: 200px      !important;
+    float: none           !important;
+    margin: 0 auto 20px   !important;
+  }
 }
-
 
 
 

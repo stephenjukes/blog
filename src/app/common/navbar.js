@@ -10,7 +10,8 @@ class NavBar extends React.Component {
             <nav id="navbar">
                 <ul>
                     <li><Link to={"/home"}>Home</Link></li>
-                    <li><Link to={"/create-post"}>New Post</Link></li>
+                    <li><Link to={"/create-post"}>New post</Link></li>
+                    <li><Link to={"/update-profile"}>Update profile</Link></li>
                 </ul>
                 <ul>
                     <li>Search</li>

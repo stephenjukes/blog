@@ -22,21 +22,10 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        //var users = defaultUsers.map(u => `\n${u.user_Id}: ${u.username}`);
-        // var userId = prompt(`Log in as: \n\nor cancel to log in normally.`);
-        // var user = defaultUsers;//.find(u => u.userId == userId);
-        // var u = defaultUsers.find(us => us.user_Id == userId);
-
-        // if (u !== null) {
-        //     var username = u.username;
-        //     var password = u.password;
-        //     this.handleClick(u.username, u.password);
-        // }
-
         return (
             <div id="login" className="route">
                 <section 
-                    class="demo"
+                    className="demo"
                     style={{
                         marginTop: -20 * defaultUsers.length - 90  //-20 = height of each item, -90 = heading + padding
                     }}

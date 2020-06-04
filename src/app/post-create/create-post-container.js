@@ -8,7 +8,7 @@ import CreatePost from './create-post-action';
 class NewPostForm extends React.Component {
     handleClick = (title, content) => {
         const history = this.props.history;
-        return this.props.createPost(title, content, this.props.username, history);
+        return this.props.createPost(title, content, this.props.user, history);
     }
 
     render() {
@@ -33,13 +33,13 @@ class NewPostForm extends React.Component {
 }
 
 NewPostForm.propTypes = {
-    username: PropTypes.string.isRequired,
+    user: PropTypes.string.isRequired,
     createPost: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
     return {
-        username: state.activeUser,
+        user: state.activeUser,
     }
 }
 

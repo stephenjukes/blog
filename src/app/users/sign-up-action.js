@@ -5,6 +5,7 @@ export default function(username, email, password) {
         username: username,
         email: email,
         password: password,
+        profile: {}
     }
     
     return {

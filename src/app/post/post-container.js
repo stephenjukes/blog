@@ -6,6 +6,10 @@ import CommentOptions from '../comments/comment-options-container';
 import Comment from '../comments/comment-container';
 
 class Post extends React.Component {
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     constructCommentTree = (comments, commentId, depth) => {
         const targetComment = comments.find( c => c.id === commentId );
         const childCommentIds = targetComment.childComments;
@@ -28,7 +32,7 @@ class Post extends React.Component {
         const { posts, comments } = this.props;
         
         const postId = this.props.match.params.post_id; 
-        let post = posts.find(p => p.id == postId);     // postId from initialState is coming out as string, hence only 2 equal signs
+        let post = posts.find(p => p.id === postId);     // postId from initialState is coming out as string, hence only 2 equal signs
 
         const postComments = post.childComments
             .map(commentId => this.constructCommentTree(comments, commentId, 0))
@@ -39,7 +43,6 @@ class Post extends React.Component {
         return (
             <div id="post">
                 <NavBar />
-                <h2>Post</h2>
 
                 <section>
                     <header>
@@ -53,13 +56,13 @@ class Post extends React.Component {
                     <CommentOptions parent={post}/> {/* This needs to be the whole post to include number of likes */}
                 </section>
                 
-                <h2>Comments</h2>
-                <section>
+                <section id="comments">
+                    <h2>Comments</h2>
+
                     <ul>
                         { flattenedComments.length > 0
                             ? flattenedComments.map(c => <li key={c.id}><Comment comment={c} /></li>) 
                             : <span className="deemphasize">{placeholder}</span> }
-                             
                     </ul>
                 </section>
             </div>
