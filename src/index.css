@@ -19,7 +19,7 @@
 }
 
 body {
-  font: 14px/20px Arial;
+  font: 1em/1.5em Arial;
   color: #666;
   margin: 0;
   padding: 20px;
@@ -86,8 +86,6 @@ input, textarea{
   font-family: Arial;
   width: 100%;
 }
-
-
 
 button, input, section, textarea {
   display: block;
@@ -293,7 +291,7 @@ button:focus {
 /* COMMENT CREATION FIELD */
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 525px) {
   #profile h1 {
     display: block;
     margin: 0 auto 20px;
@@ -309,6 +307,11 @@ button:focus {
     max-width: 200px      !important;
     float: none           !important;
     margin: 0 auto 20px   !important;
+  }
+
+  nav li {
+    display: block;
+    padding: 8px 20px;
   }
 }
 

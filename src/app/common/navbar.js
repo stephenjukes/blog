@@ -21,7 +21,6 @@ class NavBar extends React.Component {
                             onClick={() => this.props.logout(null)}
                         >
                                 Log out
-    
                         </Link>
                     </li>
                 </ul>
