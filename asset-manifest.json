@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/blog/static/css/main.8b69bd6a.chunk.css",
+    "main.js": "/blog/static/js/main.a10dd9eb.chunk.js",
+    "main.js.map": "/blog/static/js/main.a10dd9eb.chunk.js.map",
+    "runtime-main.js": "/blog/static/js/runtime-main.841403cf.js",
+    "runtime-main.js.map": "/blog/static/js/runtime-main.841403cf.js.map",
+    "static/js/2.f70140d2.chunk.js": "/blog/static/js/2.f70140d2.chunk.js",
+    "static/js/2.f70140d2.chunk.js.map": "/blog/static/js/2.f70140d2.chunk.js.map",
+    "index.html": "/blog/index.html",
+    "precache-manifest.c91db75ff29622ae84dcc0c3c35175a7.js": "/blog/precache-manifest.c91db75ff29622ae84dcc0c3c35175a7.js",
+    "service-worker.js": "/blog/service-worker.js",
+    "static/css/main.8b69bd6a.chunk.css.map": "/blog/static/css/main.8b69bd6a.chunk.css.map",
+    "static/js/2.f70140d2.chunk.js.LICENSE.txt": "/blog/static/js/2.f70140d2.chunk.js.LICENSE.txt",
+    "static/media/EgonSpengler.jpg": "/blog/static/media/EgonSpengler.0c86467f.jpg",
+    "static/media/PeterVenkman.jpg": "/blog/static/media/PeterVenkman.a26c6862.jpg",
+    "static/media/RayStantz.jpg": "/blog/static/media/RayStantz.7f453069.jpg",
+    "static/media/WinstonZeddemore.jpg": "/blog/static/media/WinstonZeddemore.6037466d.jpg",
+    "static/media/ninja.jpg": "/blog/static/media/ninja.f889089d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.841403cf.js",
+    "static/js/2.f70140d2.chunk.js",
+    "static/css/main.8b69bd6a.chunk.css",
+    "static/js/main.a10dd9eb.chunk.js"
+  ]
+}
