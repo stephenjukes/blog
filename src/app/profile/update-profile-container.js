@@ -31,7 +31,6 @@ class UpdateProfile extends React.Component {
                             <li key={f}>
                                 <label>{f[0].toUpperCase() + f.slice(1)}</label>
                                 <input 
-                                    id={ f } 
                                     className="profile-field" 
                                     type="text" name={ f } 
                                     defaultValue={ profile[f] } 

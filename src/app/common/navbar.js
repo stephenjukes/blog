@@ -14,7 +14,7 @@ class NavBar extends React.Component {
                     <li><Link to={"/update-profile"}>Update profile</Link></li>
                 </ul>
                 <ul>
-                    <li>Search</li>
+                    {/* <li>Search</li> */}
                     <li>
                         <Link 
                             to={"/login"}
