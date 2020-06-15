@@ -5,6 +5,10 @@ export default function(state = [], action) {
     
     switch(action.type) {
         case types.COMMENT_ADDED:
+            var parent = state.filter(c => c.id === payload.parentId);
+            var parentWithChild = {...parent, childComments: [...payload.id], ...parent.childComments};
+            var newState = state.concat(payload);
+
             return state
                 .map(c => c.id === payload.parentId
                     ? { ...c, childComments: [...[payload.id], ...c.childComments] }

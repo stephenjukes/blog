@@ -1,7 +1,8 @@
 import types from "../types";
 import { comments } from "../initial-state/comments";
 
-let id = comments.length;
+const lastId = comments[comments.length - 1].id.match(/\d+/);
+let id = parseInt(lastId) + 1;
 
 export default function(content, user, parentId) {
     const isVisible = {
